@@ -17,12 +17,12 @@
             <el-table-column
                     label="Status"
                     prop="status"
-                    width="180">
+                    width="220">
             </el-table-column>
             <el-table-column
                     prop="tag"
                     label="Tag"
-                    width="180"
+                    width="220"
                     :filters="tagType"
                     :filter-method="filterTag"
                     filter-placement="bottom-end">

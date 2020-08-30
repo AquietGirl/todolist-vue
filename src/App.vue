@@ -2,6 +2,7 @@
     <div id="app">
         <el-container>
             <el-header class="nav-bar-header">
+                <search />
             </el-header>
             <el-container>
                 <el-aside width="200px">
@@ -35,9 +36,11 @@
 </template>
 
 <script>
+    import Search from "@/components/common/Search";
     export default {
         name: 'App',
         components: {
+            Search
         }
     }
 </script>
