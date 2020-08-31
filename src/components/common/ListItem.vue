@@ -5,9 +5,13 @@
                 style="width: 100%">
             <el-table-column
                     prop="isFinished"
-                    width="50">
+                    width="80">
                 <template slot-scope="scope">
-                    <el-checkbox :checked="scope.row.isFinished" @change="$emit('changeStatus', scope.row.id)"/>
+                    <el-switch
+                            :value="scope.row.isFinished"
+                            active-color="#13ce66"
+                            @change="$emit('changeStatus', scope.row.id)">
+                    </el-switch>
                 </template>
             </el-table-column>
             <el-table-column
@@ -44,10 +48,6 @@
                 </template>
             </el-table-column>
         </el-table>
-        <!--        <el-pagination-->
-        <!--                layout="prev, pager, next"-->
-        <!--                :total="1000">-->
-        <!--        </el-pagination>-->
     </div>
 </template>
 
@@ -55,7 +55,8 @@
     export default {
         name: "ListItem",
         props: {
-            lists: Array
+            lists: Array,
+            page: Object,
         },
         data() {
             return {
